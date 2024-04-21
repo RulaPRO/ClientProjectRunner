@@ -9,5 +9,8 @@ namespace GameConfig
     {
         public float BaseSpeed;
         public float Acceleration;
+
+        [Space]
+        public int BaseHealth;
     }
 }

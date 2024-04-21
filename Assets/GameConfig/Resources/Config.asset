@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9416a3dc51e546b7a31b419f204aa7bd, type: 3}
   m_Name: Config
   m_EditorClassIdentifier: 
-  BaseSpeed: 0
-  Acceleration: 0
+  BaseSpeed: 10
+  Acceleration: 5
+  BaseHealth: 3
