@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerZone: {fileID: 8091748500453050627}
-  durationMs: 0
+  durationMs: 5000
 --- !u!1 &2531431132115273705
 GameObject:
   m_ObjectHideFlags: 0
