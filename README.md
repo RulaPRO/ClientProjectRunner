@@ -1,1 +1,1 @@
-Конфиг с начтройками игровых параметров Assets\GameConfig\Resources\Config
+Конфиг с настройками игровых параметров Assets\GameConfig\Resources\Config
