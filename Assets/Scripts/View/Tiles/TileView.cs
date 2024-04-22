@@ -1,12 +1,13 @@
 using System;
 using Common;
 using UnityEngine;
-using View;
 
 public class TileView : MonoBehaviour
 {
     public Action OnPlayerEnter;
     public Action OnPlayerExit;
+
+    private const string PlayerTag = "Player";
     
     [SerializeField] private Transform respawnPoint;
     [SerializeField] private TriggerZone triggerZone;
@@ -33,7 +34,7 @@ public class TileView : MonoBehaviour
     
     private void OnPlayerEnterTileTriggerZone(string objectTag)
     {
-        if (objectTag.Equals("Player"))
+        if (objectTag.Equals(PlayerTag))
         {
             OnPlayerEnter?.Invoke();
         }
@@ -41,7 +42,7 @@ public class TileView : MonoBehaviour
 
     private void OnPlayerExitTileTriggerZone(string objectTag)
     {
-        if (objectTag.Equals("Player"))
+        if (objectTag.Equals(PlayerTag))
         {
             OnPlayerExit?.Invoke();
         }

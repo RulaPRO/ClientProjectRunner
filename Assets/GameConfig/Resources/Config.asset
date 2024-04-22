@@ -18,6 +18,7 @@ MonoBehaviour:
   DoubleJumpForce: 4
   BaseHealth: 3
   TilesAmountOnLevel: 20
+  TileSize: 20
   SpeedBonusValue: 2.5
   SpeedBonusDropChance: 75
   HealthBonusValue: 1
