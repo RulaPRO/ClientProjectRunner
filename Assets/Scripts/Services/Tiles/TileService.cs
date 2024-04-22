@@ -20,17 +20,18 @@ namespace Services.Tiles
 
         public void CreateTiles()
         {
-            var tiles = levelGenerator.GenerateLevel();
+            var tiles = levelGenerator.GenerateLevel(SceneContext.I.Config.TilesAmountOnLevel);
 
             StartTileView = tileFactory.Create("Start");
             StartTileView.transform.position = Vector3.zero;
 
             PathTilesViews.Clear();
             var posZ = StartTileView.transform.position.z;
+            var tileSize = SceneContext.I.Config.TileSize;
             foreach (var tile in tiles)
             {
                 var tileView = tileFactory.Create(tile.Type);
-                posZ += tile.Size;
+                posZ += tileSize;
                 tileView.transform.position = new Vector3(0.0f, 0.0f, posZ);
                 tileView.OnPlayerEnter = () => OnPlayerEnterTile(tileView);
                 tileView.OnPlayerExit = () => OnPlayerExitTile(tile);
@@ -44,7 +45,7 @@ namespace Services.Tiles
             }
             
             FinishTileView = tileFactory.Create("Finish");
-            posZ += 20.0f;
+            posZ += tileSize;
             FinishTileView.transform.position = new Vector3(0.0f, 0.0f, posZ);
         }
 

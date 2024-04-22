@@ -4,11 +4,9 @@ using Random = UnityEngine.Random;
 
 public class LevelGenerator
 {
-    private int tilesAmount = 10;
+    private int tileTypeCount = Enum.GetValues(typeof(TileType)).Length;
     
-    int tileTypeCount = Enum.GetValues(typeof(TileType)).Length;
-    
-    public List<Tile> GenerateLevel()
+    public List<Tile> GenerateLevel(int tilesAmount)
     {
         var tiles = new List<Tile>();
 
@@ -25,7 +23,6 @@ public class LevelGenerator
 public class Tile
 {
     public TileType Type;
-    public float Size = 20.0f;
 }
 
 public enum TileType
@@ -35,4 +32,5 @@ public enum TileType
     Gap = 2,
     BigGap = 3,
     Wall = 4,
+    Saw,
 }

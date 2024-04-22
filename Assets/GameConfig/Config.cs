@@ -17,6 +17,7 @@ namespace GameConfig
 
         [Space]
         public int TilesAmountOnLevel;
+        public float TileSize;
         
         [Space]
         public float SpeedBonusValue;

@@ -14,4 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BaseSpeed: 10
   Acceleration: 5
+  JumpForce: 5
+  DoubleJumpForce: 4
   BaseHealth: 3
+  TilesAmountOnLevel: 20
+  SpeedBonusValue: 2.5
+  SpeedBonusDropChance: 75
+  HealthBonusValue: 1
+  HealthBonusDropChance: 75
+  InvincibilityBonusDurationMs: 5000
+  InvincibilityBonusDropChance: 75

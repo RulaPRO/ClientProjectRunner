@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using View;
 
 namespace Factories
 {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace
+namespace Common.Player
 {
     public class PlayerMovementBehaviour : MonoBehaviour
     {

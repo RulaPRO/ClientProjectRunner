@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace View
+namespace Common
 {
     public class TriggerZone : MonoBehaviour
     {
