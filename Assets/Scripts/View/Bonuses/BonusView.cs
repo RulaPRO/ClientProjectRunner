@@ -5,6 +5,8 @@ namespace View.Bonuses
 {
     public abstract class BonusView : MonoBehaviour
     {
+        private const string PlayerTag = "Player";
+
         [SerializeField] private TriggerZone triggerZone;
 
         private void OnEnable()
@@ -19,7 +21,7 @@ namespace View.Bonuses
 
         private void OnPlayerEnter(string objectTag)
         {
-            if (objectTag.Equals("Player"))
+            if (objectTag.Equals(PlayerTag))
             {
                 ApplyBonus();
 

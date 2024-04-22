@@ -8,7 +8,7 @@ public class TileView : MonoBehaviour
     public Action OnPlayerExit;
 
     private const string PlayerTag = "Player";
-    
+
     [SerializeField] private Transform respawnPoint;
     [SerializeField] private TriggerZone triggerZone;
 
