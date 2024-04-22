@@ -18,18 +18,15 @@ public class PlayerJumpBehaviour : MonoBehaviour
         doubleJumpForce = SceneContext.I.Config.DoubleJumpForce;
     }
 
-    void Update()
+    public void TryJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded)
         {
-            if (isGrounded)
-            {
-                Jump();
-            }
-            else if (canDoubleJump)
-            {
-                DoubleJump();
-            }
+            Jump();
+        }
+        else if (canDoubleJump)
+        {
+            DoubleJump();
         }
     }
 

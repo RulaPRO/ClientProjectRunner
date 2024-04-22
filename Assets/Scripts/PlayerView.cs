@@ -5,9 +5,14 @@ using View.UI.Screens;
 public class PlayerView : MonoBehaviour
 {
     public Action OnCollisionEnterObstacle;
-    
+
+    [SerializeField] private PlayerJumpBehaviour jumpBehaviour;
+
     private const string ObstacleTag = "Obstacle";
     private const string FinishTag = "Finish";
+
+    public PlayerJumpBehaviour JumpBehaviour => jumpBehaviour;
+
 
     private void OnEnable()
     {

@@ -40,6 +40,11 @@ namespace Services.Player
             OnPlayerRespawn?.Invoke();
         }
 
+        public void TryJumpPlayer()
+        {
+            PlayerView.JumpBehaviour.TryJump();
+        }
+
         private void UpdateDeathStatus(int obj)
         {
             if (Health.Value == 0)
