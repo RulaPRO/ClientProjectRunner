@@ -65,12 +65,18 @@ namespace Services.Tiles
 
         private void OnPlayerExitTile(Tile tile)
         {
-            if (!FinishedTiles.ContainsKey(tile.Type))
+            if (tile.Type == TileType.Gap ||
+                tile.Type == TileType.BigGap ||
+                tile.Type == TileType.Wall ||
+                tile.Type == TileType.Saw)
             {
-                FinishedTiles.Add(tile.Type, 0);
-            }
+                if (!FinishedTiles.ContainsKey(tile.Type))
+                {
+                    FinishedTiles.Add(tile.Type, 0);
+                }
 
-            FinishedTiles[tile.Type] += 1;
+                FinishedTiles[tile.Type] += 1;
+            }
         }
 
         public void Dispose()

@@ -32,5 +32,5 @@ public enum TileType
     Gap = 2,
     BigGap = 3,
     Wall = 4,
-    Saw,
+    Saw = 5,
 }
