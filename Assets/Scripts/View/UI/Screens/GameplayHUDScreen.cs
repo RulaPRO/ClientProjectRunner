@@ -21,7 +21,10 @@ namespace View.UI.Screens
         
         private void OnPlayerHealsDecrease(int value)
         {
-            imageFadeAnimation.Play();
+            if (SceneContext.I.PlayerService.Health.Value > 0)
+            {
+                imageFadeAnimation.Play();
+            }
         }
 
         private void OnPlayerDeath()

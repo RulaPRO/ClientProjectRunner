@@ -53,6 +53,38 @@ namespace Services.Tiles
         {
             var maxExclusive = Enum.GetValues(typeof(BonusType)).Length;
             var randomType = (BonusType)Random.Range(1, maxExclusive);
+            var range = Random.Range(0, 100);
+            switch (randomType)
+            {
+                case BonusType.Health:
+                {
+                    if (range > SceneContext.I.Config.HealthBonusDropChance)
+                    {
+                        return;
+                    }
+
+                    break;
+                }
+                case BonusType.Speed:
+                {
+                    if (range > SceneContext.I.Config.SpeedBonusDropChance)
+                    {
+                        return;
+                    }
+
+                    break;
+                }
+                case BonusType.Invincibility:
+                {
+                    if (range > SceneContext.I.Config.InvincibilityBonusDropChance)
+                    {
+                        return;
+                    }
+
+                    break;
+                }
+            }
+            
             var bonusView = bonusFactory.Create(randomType);
             bonusView.transform.parent = parent;
             bonusView.transform.localPosition = Vector3.zero;
